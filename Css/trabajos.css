@@ -1,0 +1,233 @@
+:root {
+    --color-primary: #343353;
+    --color-secondary: #ff4c60;
+    --color-terciary: #ffd15c;
+}
+
+
+/* ESTILOS GENERALES */
+
+{
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #F5F5F5;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /*Con esta propiedas ocultamos el contenido que se va fuera del viewport */
+}
+
+
+/* NAVBAR */
+
+.navbar-container__mobile {
+    display: none;
+}
+
+.navbar-container__desktop {
+    min-width: 290px;
+    max-width: 290px;
+    border-right: solid 1px rgba(255, 255, 255, 0.1);
+    background-color: var(--color-primary);
+}
+
+.padre {
+    min-width: 290px;
+    max-width: 290px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hijo {
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    display: inline-block;
+}
+
+.name {
+    width: 300px;
+    height: 110px;
+    border: 20px;
+    padding: auto;
+    margin-top: 60px;
+    margin-bottom: 103px;
+}
+
+.navbarlogo {
+    width: 108px;
+    height: 108px;
+    border-radius: 40px;
+    margin: 40px;
+}
+
+.name2 {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: center;
+    color: aliceblue;
+    width: 80px;
+    height: 40px;
+    padding-left: 10px;
+    padding: top 10px;
+    ;
+}
+
+.items {
+    list-style: none;
+    color: aliceblue;
+    width: 100px;
+    height: 50px;
+}
+
+.link {
+    color: aliceblue;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.letrastyle {
+    color: aliceblue;
+    font-size: 26px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.letrastyle2 {
+    color: aliceblue;
+    font-size: 16px;
+}
+
+#iconos {
+    width: 30px;
+    height: 30px;
+    color: goldenrod;
+}
+
+#iconos2 {
+    width: 25px;
+    height: 25px;
+    color: aliceblue;
+}
+
+.full-container {
+    overflow-y: scroll;
+    /*Con esta propiedas logramos que el eje y de nuestra pagina sea scrolleable */
+    scroll-behavior: smooth;
+    /*Con esta propiedas logramos que las anclas de nuestra pagina se vean "suavizadas"*/
+    width: 100%;
+    height: 100%;
+}
+
+
+/* WORKS */
+
+.contenedortrabajo {
+    display: flex;
+    width: 90%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.trabajocard {
+    width: 350px;
+    height: 350px;
+    background-color: #fafafa;
+    margin: 10px;
+    margin-left: 55px;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+
+.trabajocard:hover {
+    box-shadow: 0 4px 16px #F5F5F5;
+    transition: all 0.2s ease;
+    transform: scale(1.1);
+    background: #6c6ce5;
+    opacity: 1;
+}
+
+.imagentrabajo {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+
+.botontrabajo {
+    width: 180px;
+    background: #ff4c60;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-left: 42%;
+}
+
+.botontrabajo:hover {
+    background: #3371B6;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .container {
+        max-width: initial;
+        width: 100px;
+        height: 100px;
+    }
+    .navbar-container__desktop {
+        display: none;
+    }
+    .navbar-container__mobile {
+        display: block;
+        background-color: var(--color-primary);
+    }
+    .navbar-input,
+    .navbar-close {
+        display: none;
+    }
+    .navbar-input:checked~.navbar-close {
+        display: block;
+    }
+    .navbar-input:checked~.navbar-open {
+        display: none;
+    }
+    .navbar-contet {
+        display: none;
+    }
+    .navbar-input:checked~.navbar-contet {
+        display: flex;
+    }
+}
